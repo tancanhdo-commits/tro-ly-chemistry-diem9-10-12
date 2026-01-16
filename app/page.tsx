@@ -301,10 +301,17 @@ NỘI DUNG CẦN CÓ (trình bày theo dạng slide/infographic rõ ràng, dễ 
 7) GHI NHỚ TRONG 60 GIÂY(Mẹo nhớ nhanh)
    - Tóm tắt ngắn gọn nhất những điều “phải nhớ” để làm bài thi.
    - Trình bày dạng checklist hoặc sơ đồ cực ngắn.
-
-MỨC ĐỘ:
-- Bám sát chuẩn Easy – Medium – Hard theo cấu trúc đề thi TN THPT & Đại học.
-
+   GIAO DIỆN & HIỆU ỨNG MONG MUỐN:
+🌊 Nền gradient động - Hiệu ứng chuyển động mượt mà
+💎 Thẻ glass morphism - Độ mờ và bóng đổ đẹp hơn
+✨ Neon glow mạnh mẽ - Ánh sáng neon rực rỡ hơn
+🎯 Hover effects tinh tế - Các node phóng to và sáng lên khi hover
+🎨 Bóng đổ đa lớp - Tạo chiều sâu 3D cho các thành phần
+⭐ Text shadow cho stars - Ngôi sao phát sáng
+🔘 Nút bấm responsive - Hiệu ứng nhấn thật với active state
+📋 Scrollbar đẹp mắt - Thanh cuộn gradient với hover
+🎭 Animation fadeIn - Chuyển section mượt mà
+💫 Pulse animation nâng cao - Hiệu ứng nhấp nháy phức tạp hơn
 ${examBlock}
 `;
 
