@@ -247,7 +247,7 @@ export default function Page() {
 
     const examBlock = includeExam
       ? `
-III. CÂU HỎI ĐÃ RA TRONG ĐỀ THI TN THPT (${examYears} NĂM GẦN ĐÂY)
+ CÂU HỎI ĐÃ RA TRONG ĐỀ THI TN THPT (${examYears} NĂM GẦN ĐÂY)
 - Easy – Medium – Hard
 `
       : "";
@@ -258,6 +258,7 @@ BÀI HỌC:
 - Lớp ${grade}
 - ${chapters[chapterIndex].name}
 - ${lessons[lessonIndex].name}
+GIÁO VIÊN: ĐỖ TẤN CẢNH-0988809539
 YÊU CẦU:
 Thiết kế bộ slide/infographic học tập môn Hóa học bám sát trọng tâm kiến thức của bài, mang tính hệ thống, trực quan, và thực chiến khi thi TN THPT và Đại học.
 
@@ -279,18 +280,25 @@ NỘI DUNG CẦN CÓ (trình bày theo dạng slide/infographic rõ ràng, dễ 
    - Phân loại các dạng bài thường gặp trong đề thi.
    - Nêu chiến lược giải nhanh, mẹo làm bài và bẫy thường gặp.
 
-5) 6 BÀI TẬP LUYỆN THI 2026 (phân tầng ★ → ★★★★)
-   - 2 câu mức ★ (Easy)
-   - 2 câu mức ★★–★★★ (Medium)
-   - 2 câu mức ★★★★ (Hard)
+5) 12 BÀI TẬP LUYỆN THI 2026 (phân tầng ★ → ★★★★)
+   - 4 câu mức ★ (Easy)
+   - 5 câu mức ★★–★★★ (Medium)
+   - 3câu mức ★★★★ (Hard)
    - Mỗi câu đều có đáp án cuối.
+   - Kèm hướng dẫn giải chi tiết.
+   - Trình bày rõ ràng, dễ nhìn.
 
-6) CÂU HỎI TRẮC NGHIỆM TN THPT 4 NĂM GẦN NHẤT
+6) 8 CÂU HỎI TRẮC NGHIỆM TN THPT 4 NĂM GẦN NHẤT
    - Chọn lọc các câu tiêu biểu liên quan trực tiếp đến bài học.
    - ẨN lời giải chi tiết trong phần HINTS.
    - Kèm hướng dẫn giải chi tiết sau khi mở HINTS.
+   - Đánh dấu độ khó từng câu (Easy – Medium – Hard).
+   - Trình bày rõ ràng, dễ nhìn.
+   - Phù hợp format đề thi TN THPT.
+   -Có nút refresh để đổi câu hỏi khác.
+   - Có nút redo để làm lại câu hỏi.
 
-7) GHI NHỚ TRONG 60 GIÂY
+7) GHI NHỚ TRONG 60 GIÂY(Mẹo nhớ nhanh)
    - Tóm tắt ngắn gọn nhất những điều “phải nhớ” để làm bài thi.
    - Trình bày dạng checklist hoặc sơ đồ cực ngắn.
 
