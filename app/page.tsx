@@ -253,26 +253,50 @@ III. CÂU HỎI ĐÃ RA TRONG ĐỀ THI TN THPT (${examYears} NĂM GẦN ĐÂY)
       : "";
 
     const prompt = `
-Bạn là giáo viên Hóa học THPT, chuyên luyện thi TN THPT.
-
+Bạn là giáo viên Hóa học THPT, chuyên luyện thi Tốt nghiệp THPT và Đại học.
 BÀI HỌC:
 - Lớp ${grade}
 - ${chapters[chapterIndex].name}
 - ${lessons[lessonIndex].name}
-
 YÊU CẦU:
-Thiết kế bộ slide/infographic học tập môn Hóa học theo trục:
-CẤU TẠO → TÍNH CHẤT → PHẢN ỨNG → BÀI TOÁN.
+Thiết kế bộ slide/infographic học tập môn Hóa học bám sát trọng tâm kiến thức của bài, mang tính hệ thống, trực quan, và thực chiến khi thi TN THPT và Đại học.
 
-Bao gồm:
+NỘI DUNG CẦN CÓ (trình bày theo dạng slide/infographic rõ ràng, dễ học, dễ nhớ):
+
 1) BẢN ĐỒ LIÊN KẾT KIẾN THỨC (CONCEPT MAP)
+   - Thể hiện mối liên hệ giữa các khái niệm chính của bài.
+   - Làm nổi bật các “nút” kiến thức trọng tâm.
+
 2) TÓM TẮT LÝ THUYẾT TRỌNG TÂM
+   - Chắt lọc nội dung cốt lõi, tránh lan man.
+   - Trình bày dạng bullet point, sơ đồ hoặc bảng tổng hợp.
+
 3) CÔNG THỨC & PHẢN ỨNG QUAN TRỌNG
+   - Liệt kê đầy đủ các công thức cần nhớ.
+   - Ghi rõ điều kiện phản ứng (nếu có).
+
 4) DẠNG BÀI & PHƯƠNG PHÁP GIẢI
-5) BÀI TẬP LUYỆN THI 2026 (phân tầng ★→★★★★)
-6) CÂU HỎI TN THPT 4 NĂM GẦN NHẤT(Specific Explanation hidden in HINTS)
-7) HƯỚNG DẪN GIẢI CHI TIẾT
-8) GHI NHỚ TRONG 60 GIÂY
+   - Phân loại các dạng bài thường gặp trong đề thi.
+   - Nêu chiến lược giải nhanh, mẹo làm bài và bẫy thường gặp.
+
+5) 6 BÀI TẬP LUYỆN THI 2026 (phân tầng ★ → ★★★★)
+   - 2 câu mức ★ (Easy)
+   - 2 câu mức ★★–★★★ (Medium)
+   - 2 câu mức ★★★★ (Hard)
+   - Mỗi câu đều có đáp án cuối.
+
+6) CÂU HỎI TRẮC NGHIỆM TN THPT 4 NĂM GẦN NHẤT
+   - Chọn lọc các câu tiêu biểu liên quan trực tiếp đến bài học.
+   - ẨN lời giải chi tiết trong phần HINTS.
+   - Kèm hướng dẫn giải chi tiết sau khi mở HINTS.
+
+7) GHI NHỚ TRONG 60 GIÂY
+   - Tóm tắt ngắn gọn nhất những điều “phải nhớ” để làm bài thi.
+   - Trình bày dạng checklist hoặc sơ đồ cực ngắn.
+
+MỨC ĐỘ:
+- Bám sát chuẩn Easy – Medium – Hard theo cấu trúc đề thi TN THPT & Đại học.
+
 ${examBlock}
 `;
 
