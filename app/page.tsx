@@ -292,7 +292,7 @@ export default function Page() {
 
     const examBlock = includeExam
       ? `
-6) ${examYears * 5} CÂU HỎI TN THPT (5 NĂM GẦN NHẤT ${2025 - examYears + 1} - 2025)`
+ ${examYears * 5} CÂU HỎI TN THPT (5 NĂM GẦN NHẤT ${2021 - examYears + 1} - 2025)`
       : "";
 
     const prompt = `
