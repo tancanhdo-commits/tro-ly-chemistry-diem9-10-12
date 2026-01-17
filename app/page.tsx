@@ -278,7 +278,7 @@ Liệt kê có chọn lọc, phục vụ trực tiếp cho dạng bài thi.
 3) DẠNG BÀI & PHƯƠNG PHÁP GIẢI
 Phân loại dạng bài.
 Nêu chiến lược giải nhanh, tránh bẫy đề.
-4)CÂU HỎI ĐÃ RA TRONG ĐỀ TN THPT (5 NĂM GẦN NHẤT 2011- 2025)
+4)CÂU HỎI ĐÃ RA TRONG ĐỀ TN THPT (5 NĂM GẦN NHẤT 2021- 2025)
 Phân mức: Easy – Medium – Hard
 Có HINTS (gợi ý) thay vì lời giải trực tiếp.
 Giải từng bước khi bấm vào Đáp án.
