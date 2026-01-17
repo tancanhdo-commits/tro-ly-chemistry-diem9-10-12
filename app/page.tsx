@@ -2,13 +2,13 @@
 
 import { useState } from "react";
 
-/* ================== DATA HÓA ================== */
+/* ================== DATA HÓA (GIỮ NGUYÊN) ================== */
 type Lesson = { name: string };
 type Chapter = { name: string; lessons: Lesson[] };
 
 const chemistryData: Record<string, Chapter[]> = {
   /* ================== LỚP 10 ================== */
-  "10": [
+"10": [
     {
       name: "Chương 1. Cấu tạo nguyên tử",
       lessons: [
@@ -202,7 +202,8 @@ const chemistryData: Record<string, Chapter[]> = {
     }
   ]
 };
-/* ================== UI COMPONENT ================== */ 
+
+/* ================== UI COMPONENT (ĐÃ LÀM SÁNG & ĐẸP HƠN) ================== */
 function Card({
   title,
   children
@@ -216,16 +217,23 @@ function Card({
         marginBottom: 24,
         padding: 24,
         borderRadius: 20,
-        background: "rgba(255,255,255,0.85)",
-        boxShadow: "0 10px 30px rgba(0,0,0,0.08)",
-        backdropFilter: "blur(6px)",
-        border: "1px solid rgba(255,255,255,0.6)"
+        background: "rgba(255,255,255,0.25)",
+        backdropFilter: "blur(10px)",
+        boxShadow: "0 10px 30px rgba(0,0,0,0.2)",
+        border: "1px solid rgba(255,255,255,0.4)"
       }}
     >
-      <h2 style={{ fontSize: 22, fontWeight: 800, color: "#0d47a1" }}>
+      <h2
+        style={{
+          fontSize: 22,
+          fontWeight: 800,
+          color: "#0b0f2a",
+          marginBottom: 8
+        }}
+      >
         {title}
       </h2>
-      <div style={{ marginTop: 16, color: "#0b0f2a" }}>{children}</div>
+      <div style={{ marginTop: 16 }}>{children}</div>
     </div>
   );
 }
@@ -249,31 +257,37 @@ export default function Page() {
 
     const examBlock = includeExam
       ? `
-III. CÂU HỎI ĐÃ RA TRONG ĐỀ THI TN THPT (${examYears} NĂM GẦN ĐÂY)
+ CÂU HỎI ĐÃ RA TRONG ĐỀ THI TN THPT (${examYears} NĂM GẦN ĐÂY)
 - Easy – Medium – Hard
 `
       : "";
 
     const prompt = `
-Bạn là giáo viên Hóa học THPT, chuyên luyện thi TN THPT.
-
+Bạn là giáo viên Hóa học THPT, chuyên luyện thi Tốt nghiệp THPT và Đại học.
 BÀI HỌC:
 - Lớp ${grade}
 - ${chapters[chapterIndex].name}
 - ${lessons[lessonIndex].name}
-
+GIÁO VIÊN: ĐỖ TẤN CẢNH-0988809539
 YÊU CẦU:
-Thiết kế bộ slide/infographic học tập môn Hóa học theo trục:
-CẤU TẠO → TÍNH CHẤT → PHẢN ỨNG → BÀI TOÁN.
-
-Bao gồm:
-1) TÓM TẮT LÝ THUYẾT TRỌNG TÂM
-2) CÔNG THỨC & PHẢN ỨNG QUAN TRỌNG
+CẤU TRÚC BỘ SLIDE/INFOGRAPHIC
+1)TÓM TẮT LÝ THUYẾT TRỌNG TÂM
+Trình bày ngắn gọn, hệ thống, đúng chương trình.
+2)CÔNG THỨC & PHẢN ỨNG QUAN TRỌNG
+Liệt kê có chọn lọc, phục vụ trực tiếp cho dạng bài thi.
 3) DẠNG BÀI & PHƯƠNG PHÁP GIẢI
-4) CÂU HỎI TN THPT 4 NĂM GẦN NHẤT(Specific Explanation hidden in HINTS)
-5) BÀI TẬP LUYỆN THI 2026 (phân tầng ★→★★★★)
-6) HƯỚNG DẪN GIẢI CHI TIẾT
-7) GHI NHỚ TRONG 90 GIÂY(Mẹo nhớ lâu và mẹo làm trong kì thi).
+Phân loại dạng bài.
+Nêu chiến lược giải nhanh, tránh bẫy đề.
+4)CÂU HỎI ĐÃ RA TRONG ĐỀ TN THPT (5 NĂM GẦN NHẤT 2011- 2025)
+Phân mức: Easy – Medium – Hard
+Có HINTS (gợi ý) thay vì lời giải trực tiếp.
+Giải từng bước khi bấm vào Đáp án.
+5)BÀI TẬP LUYỆN THI 2026 (PHÂN TẦNG)+ ★ → ★★★★ (từ cơ bản đến vận dụng cao).
+HƯỚNG DẪN GIẢI CHI TIẾT
+•	Phân tích tư duy 
+6) GHI NHỚ TRONG 90 GIÂY
+•	Mẹo ghi nhớ lâu.
+•	Mẹo làm nhanh trong phòng thi.
 ${examBlock}
 `;
 
@@ -283,14 +297,13 @@ ${examBlock}
 
   const selectStyle: React.CSSProperties = {
     width: "100%",
-    padding: 12,
+    padding: 14,
     fontSize: 16,
-    borderRadius: 10,
-    border: "1px solid rgba(13,71,161,0.3)",
+    borderRadius: 12,
+    border: "1px solid rgba(0,0,0,0.15)",
     background: "#ffffff",
     color: "#0b0f2a",
     cursor: "pointer",
-    boxShadow: "inset 0 2px 6px rgba(0,0,0,0.05)"
   };
 
   return (
@@ -299,16 +312,16 @@ ${examBlock}
         minHeight: "100vh",
         padding: 40,
         background:
-          "linear-gradient(180deg, #e3f2fd 0%, #bbdefb 40%, #e8f5e9 100%)",
+          "linear-gradient(180deg, #e3f2fd 0%, #bbdefb 40%, #90caf9 100%)",
         fontFamily: "system-ui",
         color: "#0b0f2a",
       }}
     >
       <header style={{ textAlign: "center", marginBottom: 40 }}>
-        <h1 style={{ fontSize: 42, color: "#0d47a1" }}>
+        <h1 style={{ fontSize: 42, fontWeight: 900, color: "#0d47a1" }}>
           ⚛ Chemistry AI Assistant
         </h1>
-        <p style={{ fontSize: 20, color: "#1b5e20", fontWeight: 600 }}>
+        <p style={{ fontSize: 20, color: "#1a237e" }}>
           Công cụ tạo worksheet ôn thi TN THPT – Môn Hóa
         </p>
       </header>
@@ -398,10 +411,9 @@ ${examBlock}
                 fontWeight: 800,
                 borderRadius: 16,
                 border: "none",
-                color: "#ffffff",
-                background: "linear-gradient(90deg,#1e88e5,#43a047)",
-                boxShadow: "0 6px 15px rgba(0,0,0,0.15)",
-                cursor: "pointer"
+                background: "linear-gradient(90deg,#1976d2,#00c853)",
+                color: "white",
+                boxShadow: "0 8px 20px rgba(0,0,0,0.2)",
               }}
             >
               🚀 Generate Worksheet
@@ -416,7 +428,7 @@ ${examBlock}
           color: #0b0f2a;
         }
         select option:hover {
-          background: #e3f2fd;
+          background: #bbdefb;
         }
       `}</style>
     </main>
