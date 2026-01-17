@@ -203,7 +203,7 @@ const chemistryData: Record<string, Chapter[]> = {
   ]
 };
 
-/* ================== UI COMPONENT (ĐÃ LÀM SÁNG & ĐẸP HƠN) ================== */
+/* ================== UI COMPONENT */
 function Card({
   title,
   children
@@ -216,24 +216,59 @@ function Card({
       style={{
         marginBottom: 24,
         padding: 24,
-        borderRadius: 20,
-        background: "rgba(255,255,255,0.25)",
-        backdropFilter: "blur(10px)",
-        boxShadow: "0 10px 30px rgba(0,0,0,0.2)",
-        border: "1px solid rgba(255,255,255,0.4)"
+        borderRadius: 24,
+        background: "linear-gradient(135deg, rgba(255,255,255,0.35), rgba(255,255,255,0.15))",
+        backdropFilter: "blur(12px)",
+        boxShadow: "0 12px 35px rgba(0,0,0,0.18)",
+        border: "1px solid rgba(255,255,255,0.5)",
+        transition: "all 0.3s ease",
+        position: "relative",
+        overflow: "hidden",
+      }}
+      onMouseEnter={(e) => {
+        (e.currentTarget as HTMLDivElement).style.transform = "translateY(-4px) scale(1.01)";
+        (e.currentTarget as HTMLDivElement).style.boxShadow = "0 18px 45px rgba(0,0,0,0.22)";
+      }}
+      onMouseLeave={(e) => {
+        (e.currentTarget as HTMLDivElement).style.transform = "translateY(0) scale(1)";
+        (e.currentTarget as HTMLDivElement).style.boxShadow = "0 12px 35px rgba(0,0,0,0.18)";
       }}
     >
+      {/* Dải màu trang trí bên trái */}
+      <div
+        style={{
+          position: "absolute",
+          left: 0,
+          top: 0,
+          bottom: 0,
+          width: 6,
+          background: "linear-gradient(180deg, #4facfe, #00f2fe)",
+          borderTopLeftRadius: 24,
+          borderBottomLeftRadius: 24,
+        }}
+      />
+
       <h2
         style={{
           fontSize: 22,
           fontWeight: 800,
           color: "#0b0f2a",
-          marginBottom: 8
+          marginBottom: 10,
+          letterSpacing: "0.3px",
         }}
       >
         {title}
       </h2>
-      <div style={{ marginTop: 16 }}>{children}</div>
+
+      <div
+        style={{
+          marginTop: 14,
+          lineHeight: 1.6,
+          color: "#1f2937",
+        }}
+      >
+        {children}
+      </div>
     </div>
   );
 }
@@ -278,11 +313,11 @@ Liệt kê có chọn lọc, phục vụ trực tiếp cho dạng bài thi.
 3) DẠNG BÀI & PHƯƠNG PHÁP GIẢI
 Phân loại dạng bài.
 Nêu chiến lược giải nhanh, tránh bẫy đề.
-4)CÂU HỎI ĐÃ RA TRONG ĐỀ TN THPT (5 NĂM GẦN NHẤT 2021- 2025)
+4)12 CÂU HỎI ĐÃ RA TRONG ĐỀ TN THPT (5 NĂM GẦN NHẤT 2021- 2025)
 Phân mức: Easy – Medium – Hard
 Có HINTS (gợi ý) thay vì lời giải trực tiếp.
 Giải từng bước khi bấm vào Đáp án.
-5)BÀI TẬP LUYỆN THI 2026 (PHÂN TẦNG)+ ★ → ★★★★ (từ cơ bản đến vận dụng cao).
+5)12 BÀI TẬP LUYỆN THI 2026 (PHÂN TẦNG)+ ★ → ★★★★ (từ cơ bản đến vận dụng cao).
 HƯỚNG DẪN GIẢI CHI TIẾT
 •	Phân tích tư duy 
 6) GHI NHỚ TRONG 90 GIÂY
