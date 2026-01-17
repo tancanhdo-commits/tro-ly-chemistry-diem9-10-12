@@ -2,13 +2,13 @@
 
 import { useState } from "react";
 
-/* ================== DATA HÓA ================== */
+/* ================== DATA HÓA (GIỮ NGUYÊN) ================== */
 type Lesson = { name: string };
 type Chapter = { name: string; lessons: Lesson[] };
 
 const chemistryData: Record<string, Chapter[]> = {
   /* ================== LỚP 10 ================== */
-  "10": [
+"10": [
     {
       name: "Chương 1. Cấu tạo nguyên tử",
       lessons: [
@@ -203,7 +203,7 @@ const chemistryData: Record<string, Chapter[]> = {
   ]
 };
 
-/* ================== UI COMPONENT ================== */
+/* ================== UI COMPONENT (ĐÃ LÀM SÁNG & ĐẸP HƠN) ================== */
 function Card({
   title,
   children
@@ -217,10 +217,20 @@ function Card({
         marginBottom: 24,
         padding: 24,
         borderRadius: 20,
-        background: "rgba(255,255,255,0.08)"
+        background: "rgba(255,255,255,0.25)",
+        backdropFilter: "blur(10px)",
+        boxShadow: "0 10px 30px rgba(0,0,0,0.2)",
+        border: "1px solid rgba(255,255,255,0.4)"
       }}
     >
-      <h2 style={{ fontSize: 22, fontWeight: 700, color: "#80d8ff" }}>
+      <h2
+        style={{
+          fontSize: 22,
+          fontWeight: 800,
+          color: "#0b0f2a",
+          marginBottom: 8
+        }}
+      >
         {title}
       </h2>
       <div style={{ marginTop: 16 }}>{children}</div>
@@ -261,74 +271,7 @@ BÀI HỌC:
 GIÁO VIÊN: ĐỖ TẤN CẢNH-0988809539
 YÊU CẦU:
 Thiết kế bộ slide/infographic học tập môn Hóa học bám sát trọng tâm kiến thức của bài, mang tính hệ thống, trực quan, và thực chiến khi thi TN THPT và Đại học.
-
-NỘI DUNG CẦN CÓ (trình bày theo dạng slide/infographic rõ ràng, dễ học, dễ nhớ):
-
-1) BẢN ĐỒ LIÊN KẾT KIẾN THỨC (CONCEPT MAP)
-   - Thể hiện mối liên hệ giữa các khái niệm chính của bài.
-   - Làm nổi bật các “nút” kiến thức trọng tâm.
-
-2) TÓM TẮT LÝ THUYẾT TRỌNG TÂM
-   - Chắt lọc nội dung cốt lõi, tránh lan man.
-   - Trình bày dạng bullet point, sơ đồ hoặc bảng tổng hợp.
-
-3) CÔNG THỨC & PHẢN ỨNG QUAN TRỌNG
-   - Liệt kê đầy đủ các công thức cần nhớ.
-   - Ghi rõ điều kiện phản ứng (nếu có).
-
-4) DẠNG BÀI & PHƯƠNG PHÁP GIẢI
-   - Phân loại các dạng bài thường gặp trong đề thi.
-   - Nêu chiến lược giải nhanh, mẹo làm bài và bẫy thường gặp.
-
-5) 12 BÀI TẬP LUYỆN THI 2026 (phân tầng ★ → ★★★★)
-   - 4 câu mức ★ (Easy)
-   - 5 câu mức ★★–★★★ (Medium)
-   - 3câu mức ★★★★ (Hard)
-   - Mỗi câu đều có đáp án cuối.
-   - Kèm hướng dẫn giải chi tiết.
-   - Trình bày rõ ràng, dễ nhìn.
-
-6) 8 CÂU HỎI TRẮC NGHIỆM TN THPT 4 NĂM GẦN NHẤT
-   - Chọn lọc các câu tiêu biểu liên quan trực tiếp đến bài học.
-   - ẨN lời giải chi tiết trong phần HINTS.
-   - Kèm hướng dẫn giải chi tiết sau khi mở HINTS.
-   - Đánh dấu độ khó từng câu (Easy – Medium – Hard).
-   - Trình bày rõ ràng, dễ nhìn.
-   - Phù hợp format đề thi TN THPT.
-   -Có nút refresh để đổi câu hỏi khác.
-   - Có nút redo để làm lại câu hỏi.
-
-7) GHI NHỚ TRONG 60 GIÂY(Mẹo nhớ nhanh)
-   - Tóm tắt ngắn gọn nhất những điều “phải nhớ” để làm bài thi.
-   - Trình bày dạng checklist hoặc sơ đồ cực ngắn.
-   GIAO DIỆN & HIỆU ỨNG MONG MUỐN:
-🌊 Nền gradient động - Hiệu ứng chuyển động mượt mà
-💎 Thẻ glass morphism - Độ mờ và bóng đổ đẹp hơn
-✨ Neon glow mạnh mẽ - Ánh sáng neon rực rỡ hơn
-🎨 Bóng đổ đa lớp - Tạo chiều sâu 3D cho các thành phần
-⭐ Text shadow cho stars - Ngôi sao phát sáng
-🔘 Nút bấm responsive - Hiệu ứng nhấn thật với active state
-📋 Scrollbar đẹp mắt - Thanh cuộn gradient với hover
-🎭 Animation fadeIn - Chuyển section mượt mà
-💫 Pulse animation nâng cao - Hiệu ứng nhấp nháy phức tạp hơn
-✅ Correct answers → GREEN background with encouraging messages:
-
-"Well done! 🎉"
-"Great job! ⭐"
-"Excellent! 🌟"
-"Perfect! 💯"
-"Amazing! 🎊"
-"Outstanding! 🏆"
-❌ Incorrect answers → ORANGE/RED background with motivational messages:
-
-"Almost there! 💪"
-"Try again! 🔄"
-"Keep going! 🚀"
-"Don't give up! 💫"
-Progress percentage showing how much you've completed the worksheet.
-
-Tạo slide/infographic với bố cục rõ ràng, màu sắc hài hòa, hình ảnh minh họa sinh động, dễ hiểu, và thu hút học sinh.
-"${examBlock}
+${examBlock}
 `;
 
     await navigator.clipboard.writeText(prompt);
@@ -337,11 +280,11 @@ Tạo slide/infographic với bố cục rõ ràng, màu sắc hài hòa, hình 
 
   const selectStyle: React.CSSProperties = {
     width: "100%",
-    padding: 12,
+    padding: 14,
     fontSize: 16,
-    borderRadius: 10,
-    border: "1px solid rgba(255,255,255,0.4)",
-    background: "#e3f2fd",
+    borderRadius: 12,
+    border: "1px solid rgba(0,0,0,0.15)",
+    background: "#ffffff",
     color: "#0b0f2a",
     cursor: "pointer",
   };
@@ -352,14 +295,16 @@ Tạo slide/infographic với bố cục rõ ràng, màu sắc hài hòa, hình 
         minHeight: "100vh",
         padding: 40,
         background:
-          "radial-gradient(circle at top,#1a237e 0%,#0b0f2a 50%,#050816 100%)",
+          "linear-gradient(180deg, #e3f2fd 0%, #bbdefb 40%, #90caf9 100%)",
         fontFamily: "system-ui",
-        color: "#e3f2fd",
+        color: "#0b0f2a",
       }}
     >
       <header style={{ textAlign: "center", marginBottom: 40 }}>
-        <h1 style={{ fontSize: 42 }}>⚛ Chemistry AI Assistant</h1>
-        <p style={{ fontSize: 20, color: "#ffd54f" }}>
+        <h1 style={{ fontSize: 42, fontWeight: 900, color: "#0d47a1" }}>
+          ⚛ Chemistry AI Assistant
+        </h1>
+        <p style={{ fontSize: 20, color: "#1a237e" }}>
           Công cụ tạo worksheet ôn thi TN THPT – Môn Hóa
         </p>
       </header>
@@ -430,7 +375,7 @@ Tạo slide/infographic với bố cục rõ ràng, màu sắc hài hòa, hình 
 
         {lessonIndex !== null && (
           <Card title="Cấu hình đề">
-            <label style={{ display: "flex", gap: 12 }}>
+            <label style={{ display: "flex", gap: 12, fontWeight: 600 }}>
               <input
                 type="checkbox"
                 checked={includeExam}
@@ -449,7 +394,9 @@ Tạo slide/infographic với bố cục rõ ràng, màu sắc hài hòa, hình 
                 fontWeight: 800,
                 borderRadius: 16,
                 border: "none",
-                background: "linear-gradient(90deg,#00e5ff,#00c853)",
+                background: "linear-gradient(90deg,#1976d2,#00c853)",
+                color: "white",
+                boxShadow: "0 8px 20px rgba(0,0,0,0.2)",
               }}
             >
               🚀 Generate Worksheet
@@ -460,11 +407,11 @@ Tạo slide/infographic với bố cục rõ ràng, màu sắc hài hòa, hình 
 
       <style jsx global>{`
         select option {
-          background: #1a237e;
-          color: #ff1744;
+          background: #ffffff;
+          color: #0b0f2a;
         }
         select option:hover {
-          background: #283593;
+          background: #bbdefb;
         }
       `}</style>
     </main>
