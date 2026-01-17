@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-/* ================== DATA HÓA (GIỮ NGUYÊN) ================== */
+/* ================== DATA HÓA  ================== */
 type Lesson = { name: string };
 type Chapter = { name: string; lessons: Lesson[] };
 
@@ -303,7 +303,6 @@ BÀI HỌC:
 - ${lessons[lessonIndex].name}
 GIÁO VIÊN: ĐỖ TẤN CẢNH-0988809539
 YÊU CẦU:
-CẤU TRÚC BỘ SLIDE/INFOGRAPHIC
 1)TÓM TẮT LÝ THUYẾT TRỌNG TÂM
 Trình bày ngắn gọn, hệ thống, đúng chương trình.
 2)CÔNG THỨC & PHẢN ỨNG QUAN TRỌNG
