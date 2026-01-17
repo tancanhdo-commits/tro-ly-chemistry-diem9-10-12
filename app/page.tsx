@@ -351,11 +351,12 @@ ${examBlock}
     >
       <header style={{ textAlign: "center", marginBottom: 40 }}>
         <h1 style={{ fontSize: 42, fontWeight: 900, color: "#0d47a1" }}>
-          ⚛ Mr.Cảnh’s Chemistry AI Assistant
+          ⚛ Mr.Cảnh’s Chemistry AI Assistant <br></br>
+          <p style={{ fontSize: 24, color: "#7e1a40d3" }}></p>
           ❤️ Đỗ Tấn Cảnh — 0988809539 <br></br>
           Xã Đặng Thùy Trâm, tỉnh Quảng Ngãi ❤️
                   </h1>
-        <p style={{ fontSize: 20, color: "#1a237e" }}>
+        <p style={{ fontSize: 20, color: "#7e6c1a" }}>
           Công cụ tạo worksheet ôn thi TN THPT – Môn Hóa
         </p>
       </header>
