@@ -290,12 +290,7 @@ export default function Page() {
   const handleGenerate = async () => {
     if (grade === null || chapterIndex === null || lessonIndex === null) return;
 
-    const examBlock = includeExam
-      ? `
- ${examYears * 5}CÂU HỎI TN THPT (5 NĂM GẦN NHẤT 2021- 2025)`
-      : "";
-
-    const prompt = `
+const prompt = `
 Bạn là giáo viên Hóa học THPT, chuyên luyện thi Tốt nghiệp THPT và Đại học.
 BÀI HỌC:
 - Lớp ${grade}
@@ -320,7 +315,6 @@ HƯỚNG DẪN GIẢI CHI TIẾT
 6) GHI NHỚ TRONG 90 GIÂY
 •	Mẹo ghi nhớ lâu.
 •	Mẹo làm nhanh trong phòng thi.
-${examBlock}
 `;
 
     await navigator.clipboard.writeText(prompt);
